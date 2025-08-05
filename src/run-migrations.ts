@@ -2,9 +2,6 @@ import oracledb from "oracledb";
 import "dotenv/config";
 import { migrate as migrateSchema } from "./db/migrations/001-create-schema.js";
 import { migrate as createPackage } from "./db/migrations/002-create-package.js";
-console.log("DB_USER:", process.env.DB_USER);
-console.log("DB_PASSWORD:", process.env.DB_PASSWORD);
-console.log("DB_CONNECT_STRING:", process.env.DB_CONNECT_STRING);
 
 async function runMigrations(): Promise<void> {
   try {

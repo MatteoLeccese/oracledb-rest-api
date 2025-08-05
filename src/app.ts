@@ -1,5 +1,5 @@
 import express from "express";
-// import workers from "./routes/workers";
+import workerRoutes from "./routes/worker.routes";
 
 // Initializing the express app
 const app = express();
@@ -8,6 +8,6 @@ const app = express();
 app.use(express.json());
 
 // Adding the 'workers' routes to the app using 'api' as base
-// app.use("/api", workers);
+app.use("/api/workers", workerRoutes);
 
 export default app;
