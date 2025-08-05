@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "74eb8e78-4429-46de-a037-e603d621b6c4",
+		"name": "oracle-node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19701124"
+	},
+	"item": [
+		{
+			"name": "Get Workers Salary",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api_url}}/api/workers/total-salary",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"api",
+						"workers",
+						"total-salary"
+					]
+				},
+				"description": "### Get Total Workers Salary\n\nThis endpoint retrieves the total salary of all workers in the system.\n\n#### Request Format\n\nThis endpoint does not require any request body.\n\n#### Response Structure\n\nOn a successful request, the server responds with a status code of `200` and a JSON object containing the total salary of all workers. The structure of the response is as follows:\n\n``` json\n{\n  \"totalWorkersSalary\": <number>\n}\n\n ```"
+			},
+			"response": [
+				{
+					"name": "200_OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/workers/total-salary",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"workers",
+								"total-salary"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-JzRf3qZuLje024Yc9KZ0FuMqreo\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 05 Aug 2025 17:06:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"totalWorkersSalary\": 165000\n}"
+				},
+				{
+					"name": "{{api_url}}/api/workers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/workers/total-salary",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"workers",
+								"total-salary"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-JzRf3qZuLje024Yc9KZ0FuMqreo\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 05 Aug 2025 17:06:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"totalWorkersSalary\": 165000\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Workers",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api_url}}/api/workers",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"api",
+						"workers"
+					]
+				},
+				"description": "### Get Workers API\n\nThis endpoint retrieves a list of workers from the system.\n\n#### Request Format\n\nThis endpoint does not require any request body.\n\n#### Response\n\nOn a successful request, the API responds with a status code of `200` and a JSON object containing an array of workers. The structure of the response is as follows:\n\n``` json\n{\n  \"workers\": [\n    {\n      \"worker_id\": 0,\n      \"first_name\": \"\",\n      \"last_name\": \"\",\n      \"email\": \"\",\n      \"salary\": 0,\n      \"department_name\": \"\"\n    }\n  ]\n}\n\n ```\n\n##### Response Fields\n\n- **workers**: An array of worker objects, each containing:\n    \n    - **worker_id**: A unique identifier for the worker (integer).\n        \n    - **first_name**: The first name of the worker (string).\n        \n    - **last_name**: The last name of the worker (string).\n        \n    - **email**: The email address of the worker (string).\n        \n    - **salary**: The salary of the worker (integer).\n        \n    - **department_name**: The name of the department the worker belongs to (string)."
+			},
+			"response": [
+				{
+					"name": "200_OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/workers",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"workers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "414"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19e-KsGdUToQjby9pQxjAQ3PgifA2y4\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 05 Aug 2025 17:07:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"workers\": [\n        {\n            \"worker_id\": 1,\n            \"first_name\": \"John\",\n            \"last_name\": \"Doe\",\n            \"email\": \"john.doe@example.com\",\n            \"salary\": 50000,\n            \"department_name\": \"HR\"\n        },\n        {\n            \"worker_id\": 2,\n            \"first_name\": \"Jane\",\n            \"last_name\": \"Smith\",\n            \"email\": \"jane.smith@example.com\",\n            \"salary\": 60000,\n            \"department_name\": \"Engineering\"\n        },\n        {\n            \"worker_id\": 3,\n            \"first_name\": \"Michael\",\n            \"last_name\": \"Brown\",\n            \"email\": \"michael.brown@example.com\",\n            \"salary\": 55000,\n            \"department_name\": \"Engineering\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Workers With Annual Salary",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api_url}}/api/workers/annual-salaries",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"api",
+						"workers",
+						"annual-salaries"
+					]
+				},
+				"description": "### Get All Workers With Annual Salary\n\nThis endpoint retrieves the annual salaries of all workers in the organization.\n\n#### Request Format\n\nThis endpoint does not require any request body.\n\n#### Response Structure\n\nOn a successful request, the server responds with a JSON object containing an array of workers. Each worker object includes the following fields:\n\n- **worker_id**: (integer) A unique identifier for the worker.\n    \n- **first_name**: (string) The first name of the worker.\n    \n- **last_name**: (string) The last name of the worker.\n    \n- **annual_salary**: (integer) The annual salary of the worker.\n    \n- **department_name**: (string) The name of the department to which the worker belongs.\n    \n\n#### Example Response\n\n``` json\n{\n  \"workers\": [\n    {\n      \"worker_id\": 0,\n      \"first_name\": \"\",\n      \"last_name\": \"\",\n      \"annual_salary\": 0,\n      \"department_name\": \"\"\n    }\n  ]\n}\n\n ```"
+			},
+			"response": [
+				{
+					"name": "200_OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/workers/annual-salaries",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"workers",
+								"annual-salaries"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "338"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"152-8oKSjrX3wqldbhFVJAaaiqbJzkk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 05 Aug 2025 17:06:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"workers\": [\n        {\n            \"worker_id\": 1,\n            \"first_name\": \"John\",\n            \"last_name\": \"Doe\",\n            \"annual_salary\": 600000,\n            \"department_name\": \"HR\"\n        },\n        {\n            \"worker_id\": 2,\n            \"first_name\": \"Jane\",\n            \"last_name\": \"Smith\",\n            \"annual_salary\": 720000,\n            \"department_name\": \"Engineering\"\n        },\n        {\n            \"worker_id\": 3,\n            \"first_name\": \"Michael\",\n            \"last_name\": \"Brown\",\n            \"annual_salary\": 660000,\n            \"department_name\": \"Engineering\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
