@@ -10,6 +10,19 @@ A Node.js REST API for querying and managing worker data stored in an Oracle dat
 - Oracle migrations for schema and PL/SQL package
 - Environment-based configuration
 
+## Prerequisites
+Before installing and running this project, make sure you have the following installed on your system:
+
+- **Node.js** (recommended version: 18.x or higher)
+- **npm** (comes with Node.js)
+- **Oracle Database** (you can use Oracle Database Express Edition for development)
+- **Valid access and credentials** to connect to your Oracle database
+- **Oracle Instant Client** installed (if your environment requires it for node-oracledb)
+
+**Note:** If you are using Windows, make sure to set the necessary environment variables for Oracle Instant Client.
+
+Once you have these prerequisites, follow the installation and setup steps described below.
+
 ## Setup
 
 ### 1. Install dependencies
@@ -64,3 +77,9 @@ To test the application you can run the following command:
 ```sh
 npm run test
 ```
+
+## Contact
+
+If you have any questions, suggestions, or need support, feel free to contact me:
+
+[![Email me](https://img.shields.io/badge/Email-matteoleccese2099@gmail.com-blue?style=for-the-badge&logo=gmail)](mailto:matteoleccese2099@gmail.com)
