@@ -57,3 +57,10 @@ Once the migrations are done you can run on development
 ```sh
 npm run dev
 ```
+
+## Test the application
+To test the application you can run the following command:
+
+```sh
+npm run test
+```
